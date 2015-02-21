@@ -346,19 +346,16 @@ navigator.userAgent.indexOf("MSIE") < 0 && navigator.plugins.refresh(), function
 (jQuery);
 
 
-
+// 主页地址
+https://www.bestpay.com.cn
 
 // -- id=_ocx_password3 表示用密码登录时的密码安全控件
-_ocx_password5 = document.getElementById("_ocx_password3")
-
+_ocx_password3 = document.getElementById("_ocx_password5")
 
 // 火狐浏览器id = 5
 5 == this.osBrowser
 // 火狐浏览器下获取控件的版本信息
 navigator.plugins.PassGuard.description
-// --以下代码可以登录界面中的密码框内容
-_ocx_password3 = document.getElementById("_ocx_password3")
-
 // pwdclear 清除密码框中的密码
 _ocx_password3.ClearSeCtrl()
 // pwdSetSk 其中e代表调用/api/security/getRandomString返回的随机码
@@ -367,22 +364,22 @@ _ocx_password3.input(1, e)
 _ocx_password3.output(7)
 // pwdResult 获取密码的结果值,注意这和获取密码hash值是同一个方法
 _ocx_password3.output(7)
-// machineNetwork 猜测是获取网卡的mac地址
+// machineNetwork 猜测是获取网卡的mac地址(ok)
 _ocx_password3.output(9)
-// machineDisk 猜测是获取磁盘的标识
+// machineDisk 猜测是获取磁盘的标识(ok)
 _ocx_password3.output(11)
-// machineCPU 猜测是获取cpuid的
+// machineCPU 猜测是获取cpuid的(ok)
 _ocx_password3.output(10)
-// pwdSimple 难道是获取原始密码??
+// pwdSimple 奇怪这个函数只会返回1，不知道是做什么用的
 _ocx_password3.output(13)
-// pwdValid 检查密码是否有效
+// pwdValid 检查密码是否有效(ok)  1表示无效，0表示有效
 _ocx_password3.output(5)
-// pwdHash 密码本身的hash值
+// pwdHash 密码本身的hash值(ok)
 _ocx_password3.output(2)
-// pwdLength 得到密码的长度
+// pwdLength 得到密码的长度(ok)
 _ocx_password3.output(3)
-// pwdStrength 密码的强度
-_ocx_password3.output(3),_ocx_password3.output(4) // 并做了相应处理
+// pwdStrength 密码的强度 (ok) 值越大表示密码强度越高
+_ocx_password3.output(4)
 // checkInstall 检查控件是否安装
 navigator.plugins.PassGuard.description // 并做了相应处理
 // getVersion 获取控件的版本
