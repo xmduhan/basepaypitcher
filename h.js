@@ -352,24 +352,51 @@ navigator.userAgent.indexOf("MSIE") < 0 && navigator.plugins.refresh(), function
 _ocx_password5 = document.getElementById("_ocx_password3")
 
 
-// --以下代码可以登录界面中的密码框内容
-_ocx_password3 = document.getElementById("_ocx_password3")
-_ocx_password3.ClearSeCtrl()
 
-// 改变控件的背景颜色
-_ocx_password3.BackColor
+
 
 // 火狐浏览器id = 5
 5 == this.osBrowser
 // 火狐浏览器下获取控件的版本信息
 navigator.plugins.PassGuard.description
+// --以下代码可以登录界面中的密码框内容
+_ocx_password3 = document.getElementById("_ocx_password3")
 
+// pwdclear 清除密码框中的密码
+_ocx_password3.ClearSeCtrl()
+// pwdSetSk 其中e代表调用/api/security/getRandomString返回的随机码
+_ocx_password3.input(1, e)
+// pwdResultHash 获取密码的结果的hash值
 _ocx_password3.output(7)
+// pwdResult 获取密码的结果值,注意这和获取密码hash值是同一个方法
+_ocx_password3.output(7)
+// machineNetwork 猜测是获取网卡的mac地址
+_ocx_password3.output(9)
+// machineDisk 猜测是获取磁盘的标识
 _ocx_password3.output(11)
-
+// machineCPU 猜测是获取cpuid的
 _ocx_password3.output(10)
-
+// pwdSimple 难道是获取原始密码??
+_ocx_password3.output(13)
+// pwdValid 检查密码是否有效
+_ocx_password3.output(5)
+// pwdHash 密码本身的hash值
 _ocx_password3.output(2)
+// pwdLength 得到密码的长度
+_ocx_password3.output(3)
+// pwdStrength 密码的强度
+_ocx_password3.output(3),_ocx_password3.output(4) // 并做了相应处理
+// checkInstall 检查控件是否安装
+navigator.plugins.PassGuard.description // 并做了相应处理
+// getVersion 获取控件的版本
+navigator.plugins.PassGuard.description // 并做了相应处理
+// setColor 改变控件的颜色
+_ocx_password3.ForeColor    // 前景色
+_ocx_password3.BackColor    // 背景色
+
+
+
+
 
 // --这个控件id表示着另一个控件
 _ocx_password4 = document.getElementById("_ocx_password4")
