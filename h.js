@@ -348,11 +348,8 @@ navigator.userAgent.indexOf("MSIE") < 0 && navigator.plugins.refresh(), function
 
 
 
-// -- 1
+// -- id=_ocx_password3 表示用密码登录时的密码安全控件
 _ocx_password5 = document.getElementById("_ocx_password3")
-
-
-
 
 
 // 火狐浏览器id = 5
@@ -394,11 +391,15 @@ navigator.plugins.PassGuard.description // 并做了相应处理
 _ocx_password3.ForeColor    // 前景色
 _ocx_password3.BackColor    // 背景色
 
+// 这几个方法功能未知但应该有
+output(1)
+output(6)
+output(8)
+output(12)
 
 
 
 
 // --这个控件id表示着另一个控件
 _ocx_password4 = document.getElementById("_ocx_password4")
-
 _ocx_password4.GetNicPhAddr(2)
