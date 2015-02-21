@@ -26,7 +26,8 @@ var PGEdit_IE32_CLASSID = "3A2C8BC3-5B68-4AE5-81D6-6DC378708F3E",
 navigator.plugins.length  目前发现29项
 navigator.plugins[15]
 Plugin { 0: MimeType, application/x-pass-guard: MimeType, description: "PassGuard®™ 密码卫士插件 Version:2.0.9.2", filename: "npPassGuard.dll", version: "2.0.9.2", name: "PassGuard", length: 1 }
-
+文件位置:
+C:\Windows\SysWOW64\Microdone\PassGuard
 
 // ... ...
 var v = new $.pge(
