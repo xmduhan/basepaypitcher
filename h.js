@@ -389,10 +389,10 @@ _ocx_password3.ForeColor    // 前景色
 _ocx_password3.BackColor    // 背景色
 
 // 这几个方法功能未知但应该有
-output(1)
-output(6)
-output(8)
-output(12)
+_ocx_password3.output(1)
+_ocx_password3.output(6)
+_ocx_password3.output(8)  // 可以调用但是用途不明
+_ocx_password3.output(12)
 
 
 
