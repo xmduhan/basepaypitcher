@@ -152,6 +152,21 @@ navigator.userAgent.indexOf("MSIE") < 0 && navigator.plugins.refresh(), function
                     }
                     return 6 == this.osBrowser ? '<embed ID="' + this.settings.pgeId + '" input2="' + this.settings.pgeEreg1 + '" input3="' + this.settings.pgeEreg2 + '" input4="' + Number(this.settings.pgeMaxlength) + '" input0="' + Number(this.settings.pgeEdittype) + '" type="application/microdone-passguard-plugin" version="' + PGEdit_MacOs_VERSION + '" tabindex="' + this.settings.pgeTabindex + '" class="' + this.settings.pgeClass + '">' : 8 == this.osBrowser ? '<embed ID="' + this.settings.pgeId + '" input2="' + this.settings.pgeEreg1 + '" input3="' + this.settings.pgeEreg2 + '" input4="' + Number(this.settings.pgeMaxlength) + '" input0="' + Number(this.settings.pgeEdittype) + '" type="application/microdone-passguard-safari-plugin" version="' + PGEdit_MacOs_Safari_VERSION + '" tabindex="' + this.settings.pgeTabindex + '" class="' + this.settings.pgeClass + '">' : '<div id="' + this.settings.pgeId + '_down" class="' + this.settings.pgeInstallClass + '" style="text-align:center;">暂不支持此浏览器</div>'
                  },
+                 /*
+                 // 在火狐浏览器上getpgeHtml生成的最后代码为,但这个如何告诉浏览器用的是什么控件呢,
+                 // 难道 "application/x-pass-guard" 对应 "PassGuard®™ 密码卫士插件 Version:2.0.9.2"
+                 // 好像真的是这样 navigator.plugins.PassGuard.item().type 显示:
+                 // "application/x-pass-guard"
+                 <embed id="_ocx_password3"
+                  maxlength="20"
+                  input_2="[\s\S]*"
+                  input_3="[\s\S]{6,20}"
+                  edittype="0"
+                  type="application/x-pass-guard"
+                  tabindex="1"
+                  class="ocx_style4">
+                 */
+
                  getDownHtml: function () {
                     return 1 == this.osBrowser || 3 == this.osBrowser ? '<span id="' + this.settings.pgeId + '_down" class="' + this.settings.pgeInstallClass + '" style="text-align:center;"><a href="' + this.settings.pgePath + this.pgeditIEExe + '">' + this.pgeDownText + "</a></span>" : 2 == this.osBrowser || 4 == this.osBrowser || 5 == this.osBrowser || 6 == this.osBrowser || 8 == this.osBrowser ? '<span id="' + this.settings.pgeId + '_down" class="' + this.settings.pgeInstallClass + '" style="text-align:center;"><a href="' + this.settings.pgePath + this.pgeditFFExe + '">' + this.pgeDownText + "</a></span>" : '<div id="' + this.settings.pgeId + '_down" class="' + this.settings.pgeInstallClass + '" style="text-align:center;">暂不支持此浏览器</div>'
                  },
@@ -380,7 +395,7 @@ navigator.userAgent.indexOf("MSIE") < 0 && navigator.plugins.refresh(), function
 https://www.bestpay.com.cn
 
 // -- id=_ocx_password3 表示用密码登录时的密码安全控件
-_ocx_password3 = document.getElementById("_ocx_password5")
+_ocx_password3 = document.getElementById("_ocx_password3")
 
 // 火狐浏览器id = 5
 5 == this.osBrowser
