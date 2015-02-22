@@ -324,16 +324,16 @@ navigator.userAgent.indexOf("MSIE") < 0 && navigator.plugins.refresh(), function
                             if (t.indexOf(":") > 0) {
                                 e = t.split(":");
                                 {
-                                    e[1]
+                                    e[1]  // 尝试访问是否存在1元素否则抛出异常
                                 }
                             } else;
                         } else if (3 == this.osBrowser) {
                             new ActiveXObject("PassGuardX64.PassGuard.1")
                         }
                     } catch (i) {
-                        return!1
+                        return!1  //false
                     }
-                    return!0
+                    return!0  // true
                  },
                  getVersion: function () {
                     try {
